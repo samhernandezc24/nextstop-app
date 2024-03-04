@@ -1,0 +1,7 @@
+{
+  "name": "nextstop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
