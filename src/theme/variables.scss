@@ -4,28 +4,28 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary: #cd5758;
+  --ion-color-primary-rgb: 205, 87, 88;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #e49797;
+  --ion-color-primary-tint: #fd6f67;
 
   /** secondary **/
-  --ion-color-secondary: #3dc2ff;
-  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary: #69b9cd;
+  --ion-color-secondary-rgb: 105, 185, 205;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
-  --ion-color-secondary-shade: #36abe0;
-  --ion-color-secondary-tint: #50c8ff;
+  --ion-color-secondary-shade: #a6edff;
+  --ion-color-secondary-tint: #a6edff;
 
   /** tertiary **/
-  --ion-color-tertiary: #5260ff;
-  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary: #57c8d3;
+  --ion-color-tertiary-rgb: 87, 200, 211;
   --ion-color-tertiary-contrast: #ffffff;
   --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-  --ion-color-tertiary-shade: #4854e0;
-  --ion-color-tertiary-tint: #6370ff;
+  --ion-color-tertiary-shade: #90f2fc;
+  --ion-color-tertiary-tint: #90f2fc;
 
   /** success **/
   --ion-color-success: #2dd36f;
@@ -76,19 +76,19 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
    */
 
   body {
-    --ion-color-primary: #428cff;
-    --ion-color-primary-rgb: 66,140,255;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255,255,255;
-    --ion-color-primary-shade: #3a7be0;
-    --ion-color-primary-tint: #5598ff;
+    --ion-color-primary: #CD5758;
+    --ion-color-primary-rgb: 253, 95, 86;
+    --ion-color-primary-contrast: #FFFFFF;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #DF544C;
+    --ion-color-primary-tint: #FD6F67;
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80,200,255;

@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
       Publicaciones
     </ion-title>
@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item button *ngFor="let publicacion of lstPublicaciones">
+    <ion-item button *ngFor="let publicacion of lstPublicaciones" [routerLink]="['/tab4', publicacion.pub_id]">
       <ion-label>
         <p>{{ publicacion.pub_titulo }}</p>
       </ion-label>
