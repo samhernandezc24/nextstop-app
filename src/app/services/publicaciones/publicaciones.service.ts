@@ -3,17 +3,14 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Server } from '../../libraries/server';
+import { Sessions } from '../../libraries/sessions';
 import { APP_BASE_HREF } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PublicacionesService {
-  token: string = '100-token';
-  httpHeader: any = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.token }),
-  };
-
+  
   constructor(private http: HttpClient, @Inject(APP_BASE_HREF) private baseUrl: string) { this.baseUrl = Server.url(); }
 
   index(): Observable<any> {
@@ -32,15 +29,14 @@ export class PublicacionesService {
     );
   }
 
-  // postPublicacion(publicacion: Publicacion) {
-  //   return this.http.post(this.baseUrl + 's', publicacion)
-  //       .pipe(
-  //         map((res: any) => { 
-  //           return res;
-  //         }),
-  //         catchError(error => {
-  //           return throwError(error.status || 'Error de servidor.');
-  //         }), 
-  //       );
-  // }
+  create(varArgs: any) {
+    return this.http.post(this.baseUrl + 'publicacion-rests', varArgs, Sessions.header()).pipe(
+      map((res: any) => {
+        return res;
+      }),
+      catchError(error => {
+        return throwError(error.status || 'Error de Servidor.');
+      }), 
+    );
+  }
 }

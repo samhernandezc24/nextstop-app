@@ -11,12 +11,11 @@ export class TabsPage {
 
   constructor(private modalCtrl: ModalController) {}
 
-  async new() {
-    const modal = await this.modalCtrl.create({
-      component: PublicacionesCreatePage,
-      breakpoints: [0, 0.3, 0.5, .95],
-      initialBreakpoint: 0.95,
+  // EVENTOS
+  async btnCreate_clickEvent() {
+    const modalRef = await this.modalCtrl.create({
+      component: PublicacionesCreatePage,      
     });
-    await modal.present();
+    await modalRef.present();
   }
 }
