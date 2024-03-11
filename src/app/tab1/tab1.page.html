@@ -1,19 +1,18 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>
-      Publicaciones
-    </ion-title>
+    <ion-title>NextStop</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-list>
-    <ion-item button *ngFor="let publicacion of lstPublicaciones" [routerLink]="['/tab4', publicacion.pub_id]">
+    <ion-item button *ngFor="let publicacion of lstPublicaciones" [routerLink]="['/publicacion/details', publicacion.pub_id]">
       <ion-label>
-        <p>{{ publicacion.pub_titulo }}</p>
+        <p>{{ publicacion.pub_titulo | titlecase }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
+  
   <ion-infinite-scroll>
     <ion-infinite-scroll-content loadingText="Por favor espere..."
       loadingSpinner="bubbles"></ion-infinite-scroll-content>

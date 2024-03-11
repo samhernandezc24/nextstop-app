@@ -27,7 +27,7 @@ export class Tab1Page {
     });
     await loading.present();
 
-    this.publicacionService.getPublicaciones().subscribe(
+    this.publicacionService.index().subscribe(
       (res) => {
         loading.dismiss();
         this.lstPublicaciones = res;

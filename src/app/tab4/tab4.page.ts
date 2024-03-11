@@ -14,7 +14,7 @@ export class Tab4Page implements OnInit {
 
   ngOnInit() {
     const id: string = this.route.snapshot.paramMap.get('id') ?? '';
-    this.publicacionService.getPublicacionDetails(id).subscribe((res) => {
+    this.publicacionService.details(id).subscribe((res) => {
       this.publicacion = res;
     });
   }
