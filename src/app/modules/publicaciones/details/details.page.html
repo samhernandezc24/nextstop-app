@@ -33,8 +33,6 @@
     <div class="publicacion-details__content">
       <ion-text>{{ publicacion?.pub_descripcion | lowercase }}</ion-text>
 
-
-
       <!-- USUARIO: -->
       <div class="publicacion-details__user">
         <!-- FOTO USUARIO: -->
@@ -42,7 +40,7 @@
           <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="" />
         </ion-avatar>
         <!-- NOMBRE COMPLETO USUARIO: -->
-        <ion-label class="publicacion-details__username">{{ publicacion?.pub_createdusuario | lowercase }}</ion-label>
+        <ion-label class="publicacion-details__username">{{ publicacion?.pub_createdusuario | titlecase }}</ion-label>
       </div>
 
       <!-- FECHA CREACIÓN: -->

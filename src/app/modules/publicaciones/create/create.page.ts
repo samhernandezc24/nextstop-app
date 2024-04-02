@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { LoadingController, ModalController, ToastController } from '@ionic/angular';
 import { PublicacionesService } from '@services/publicaciones/publicaciones.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class PublicacionesCreatePage implements OnInit {
   formGroup! : FormGroup;
 
   constructor(private objPublicacionesService: PublicacionesService,
+              private modalCtrl: ModalController,
               private toastCtrl: ToastController, 
               private loadingCtrl: LoadingController) { }
 
@@ -33,6 +34,10 @@ export class PublicacionesCreatePage implements OnInit {
     }
 
     this.store();
+  }
+
+  btnCancel_clickEvent() {
+    this.modalCtrl.dismiss(null, 'cancel');
   }
 
   // METODOS
